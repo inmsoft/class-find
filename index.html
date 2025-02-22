@@ -16,34 +16,43 @@
         }
         .container {
             background: white;
-            padding: 20px;
+            padding: 30px;
             border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
             text-align: center;
-            max-width: 400px;
-            width: 100%;
+            max-width: 500px;
+            width: 90%;
         }
         input, button {
             margin: 10px 0;
-            padding: 10px;
+            padding: 12px;
             width: 100%;
             border: 1px solid #ddd;
             border-radius: 5px;
+            font-size: 16px;
+            box-sizing: border-box;
         }
         button {
             background-color: #28a745;
             color: white;
             border: none;
             cursor: pointer;
+            font-size: 16px;
         }
         button:hover {
             background-color: #218838;
         }
         #result {
             margin-top: 20px;
-            padding: 10px;
+            padding: 15px;
             background: #e9ecef;
             border-radius: 5px;
+            font-size: 16px;
+        }
+        .notice {
+            margin-top: 20px;
+            font-size: 14px;
+            color: black;
         }
     </style>
     <script>
@@ -80,11 +89,11 @@
                     if (이름 === name && 생년월일 === birth) {
                         document.getElementById("result").innerHTML = `
                             <p><strong>이름:</strong> ${이름}</p>
-                            <p><strong>진급학년:</strong> ${신학년}</p>
-                            <p><strong>진급학년 반:</strong> ${신반}</p>
-                            <p><strong>진급학년 번호:</strong> ${신번호}</p>
-                            <p><strong>이전학년반:</strong> ${구반}</p>
-                            <p><strong>이전학년번호:</strong> ${구번호}</p>
+                            <p><strong>진급 학년:</strong> ${신학년}</p>
+                            <p><strong>진급 학년 반:</strong> ${신반}</p>
+                            <p><strong>진급 학년 번호:</strong> ${신번호}</p>
+                            <p><strong>이전 학년 반:</strong> ${구반}</p>
+                            <p><strong>이전 학년 번호:</strong> ${구번호}</p>
                         `;
                         found = true;
                         break;
@@ -113,6 +122,10 @@
         <button onclick="searchStudent()">검색</button>
         <br>
         <div id="result"></div>
+        <div class="notice">
+            <p><strong>⚠ 주의:</strong> 타인의 개인정보를 무단으로 도용시 법적 처벌을 받을 수 있습니다.</p>
+            <p>반, 번호 조회가 안되거나, 개인 정보가 다를 경우 <strong>031-645-7120</strong>로 연락 주세요.</p>
+        </div>
     </div>
 </body>
 </html>
